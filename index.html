@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.5.1.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <title>CodeGram | Pottozen</title>
+</head>
+
+<body>
+    <!--Menu bar-->
+    <header>
+        <div class="inner-width">
+            <a href="#" class="logo"><img src="img/logoPequeno.png" alt=""></a>
+            <i class="menu-toggle-btn fas fa-bars"></i>
+            <nav class="navigation-menu">
+                <a href="#"><i class="fas fa-home home"></i>Inicio</a>
+                <a href="#acercaDeMi"><i class="fas fa-align-left about"></i>Acerca de Mi</a>
+                <a href="#"><i class="fab fa-buffer works"></i>Portafolio</a>
+                <a href="#"><i class="fas fa-users team"></i>Herramientas</a>
+                <a href="#"><i class="fas fa-headset contact Resaltar"></i>Contactame</a>
+            </nav>
+        </div>
+    </header>
+
+    <!--Inicio -->
+    <section class="hero">
+        <div class="texto-hero">
+            <h1>Bienvenido a mi Website</h1>
+            <p>Creamos el mejor sitio para ti</p>
+            <a href="#">Contactame</a>
+        </div>
+        <div class="svg-hero" style="height: 150px; overflow: hidden;" >
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #f1f1f1;"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!--Acerca de-->
+    <section id="acercaDeMi" class="about-section">
+        <div class="inner-width-about">
+            <h1>Acerca de Mi</h1>
+            <div class="border"></div>
+                <div class="about-section-row">
+                    <div class="about-section-col">
+                        <div class="about1">
+                            <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, sequi omnis! Quia sint voluptatem repellendus nostrum facilis fuga, natus libero perferendis magni suscipit quae porro! Tenetur labore dolore beatae ex deleniti placeat. Nostrum minima quisquam et, cupiditate quas laudantium, fugiat ea quasi quaerat itaque dolore hic sequi sit repellat necessitatibus!
+                            </p>
+                            <a href="#">Mas de Mi</a>
+                        </div>
+
+
+                    </div>
+
+                <!--Barras de Conocimiento-->
+                <div class="about-section-col">
+
+
+
+                    <div class="skills">
+
+                        <div class="skill">
+                            <div class="title">Java Develoment</div>
+                                <div class="progress">
+                                    <div class="progress-bar" per="70"></div>
+                                </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="title">Html, JavaScript y Css3</div>
+                                <div class="progress">
+                                    <div class="progress-bar" per="40"></div>
+                                </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="title">Base de Datos</div>
+                                <div class="progress">
+                                    <div class="progress-bar" per="30"></div>
+                                </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="title">Java JSP</div>
+                                <div class="progress">
+                                    <div class="progress-bar" per="60"></div>
+                                </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                </div>
+        </div>
+
+    </section>
+
+    <script type="text/javascript">
+        $(".menu-toggle-btn").click(function(){
+          $(this).toggleClass("fa-times");
+          $(".navigation-menu").toggleClass("active");
+        });
+
+        $('.progress-bar').each(function(){
+    var $this = $(this);
+    var per = $this.attr('per');
+    $this.css("width",per+'%');
+    $({animatedValue: 0}).animate({animatedValue: per},{
+      duration: 1000,
+      step: function(){
+        $this.attr('per', Math.floor(this.animatedValue) + '%');
+      },
+      complete: function(){
+        $this.attr('per', Math.floor(this.animatedValue) + '%');
+      }
+    });
+  });
+      </script>
+</body>
+</html>
